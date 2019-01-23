@@ -1,0 +1,5 @@
+menu "GM Display Serdes Drivers"
+
+config GM_DISPLAY_SERDES
+        tristate "GM DISPLAY SERDES DRIVERS"
+endmenu

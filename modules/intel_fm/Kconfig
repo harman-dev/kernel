@@ -1,0 +1,29 @@
+#Kconfig
+#
+# Intel FM Radio Adapters
+#
+menu "Intel FM Radio Adapters"
+
+config RADIO_INTEL
+        tristate "Intel FM Radio Adapter Support"
+	depends on INTEL_LD
+        depends on VIDEO_V4L2
+        ---help---
+           Choose Y here if you have this FM radio driver.
+
+           In order to control your radio card, you will need to use programs
+           that are compatible with the Video For Linux 2 API.  Information on
+           this API and pointers to "v4l2" programs may be found at
+           <file:Documentation/video4linux/API.html>.
+
+           To compile this driver as a module, choose M here: the
+           module will be called fmdrv_intel.
+
+if RADIO_INTEL && !RADIO_I8X70
+comment "Select Any one FM Radio Adaptor"
+endif
+
+config RADIO_I8X70
+        bool "Support for FM Receiver on Intel Connectivity chip (I8X70 - LnP)"
+        depends on RADIO_INTEL
+endmenu

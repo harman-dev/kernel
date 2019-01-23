@@ -1,0 +1,11 @@
+menu "Device Harman Drivers"
+
+config HARMAN_DRIVERS
+	tristate "HARMAN_DRIVERS"
+
+source "drivers/harman/dabplugin/Kconfig"
+source "drivers/harman/dynamic_spi_node/Kconfig"
+source "drivers/harman/lvsd/Kconfig"
+
+endmenu
+

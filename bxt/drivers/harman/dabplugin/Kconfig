@@ -1,0 +1,9 @@
+#
+# SPI DAB Plugin
+#
+config SPI_DAB_PLUGIN
+	tristate "SPI DAB PLUGIN SUPPORT"
+	depends on SPI && HARMAN_DRIVERS
+	help
+		Special DAB plugin
+

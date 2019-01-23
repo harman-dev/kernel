@@ -1,0 +1,12 @@
+#
+# SPI dynamic Driver
+#
+config SPI_DYNAMIC_NODE
+       tristate "SPI DYNAMIC SLAVE SUPPORT"
+       depends on SPI && HARMAN_DRIVERS && SPI_DAB_PLUGIN
+       help
+	Driver handles the platform data registration
+	for SPI slave devices dynamically. It only supports
+	DAB  and spidev on bus num 1 with CS 1.
+
+

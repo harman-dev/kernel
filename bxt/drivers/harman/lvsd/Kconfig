@@ -1,0 +1,9 @@
+config HARMAN_LVSD
+	tristate "Harman Linux Virtual Serial Driver for Mountpoints"
+	default m
+        help
+	This driver creates a /dev/ctrlX Character Driver device file,
+	which is used to Wicome's VSAL Layer, to create artificial mount
+	points like /dev/btspp1(LVSD Mount Point) etc., when requested by Projects application software for SPP profile.
+	This is a requirement for GM Project. Which will use the LVSD mount point to transfer data from BT phone to application and
+	vice versa, via BT-SPP profile.
